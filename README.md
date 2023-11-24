@@ -10,4 +10,6 @@ A Linux CLI build on Bash & Whiptail to make it easyier, makeing a BASH file for
 </p><br>
 <p align="center">
  <img src="https://github.com/gjelsoe/TheFrontSettings/blob/main/images/save.jpg">
-</p>
+</p><br>
+### TODO
+Update README
