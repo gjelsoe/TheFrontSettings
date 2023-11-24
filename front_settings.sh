@@ -1,20 +1,55 @@
 #!/bin/bash
-
+#
 # Global variables for settings files
-FRONT_USERDIR=$HOME/TheFront/data
-FRONT_SERVERDIR=$HOME/TheFront/server
-SETTINGS_FILE="server_settings.conf"
-DESCRIPTION_FILE="server_settings.help"
-USE_EPIC_SOCKET=0
+#
+FRONT_USERDIR=$HOME/TheFront/data               # Path to Save Files.
+FRONT_SERVERDIR=$HOME/TheFront/server           # Path to Dedicated Server.
+SETTINGS_FILE="server_settings.conf"            # Read settings from this file.
+DESCRIPTION_FILE="server_settings.help"         # Help file for settings.
+USE_EPIC_SOCKET=0                               # Set to 1 if using EPIC and not STEAM.
+FIND_EXTERNAL_IP=1                              # Lets the script find your IP Address. (0 - No, 1 - Yes)
+                                                # If UseSteamSocket=1, then it will insert your Public IP otherwise Local IP.
+USE_IP=127.0.0.1                           	# Enter your IP Address or let the script find it.
 
+#
+# Check if whiptail is installed
+#
+if ! command -v whiptail &> /dev/null; then
+  echo "Error: 'whiptail' is not installed. Please install it before running this script.\nUse 'sudo apt install whiptail' on Debian/Ubuntu to install"
+  exit 1
+fi
+
+#
+# Check if curl is installed
+#
+if [ $FIND_EXTERNAL_IP -eq 1 ]; then
+  if ! command -v curl &> /dev/null; then
+    echo "Error: 'curl' is not installed. Please install it before running this script.\nUse 'sudo apt install curl' on Debian/Ubuntu to install"
+    exit 1
+  fi
+fi
+
+#
+# Function to get the Local/Public IP address of the server
+#
+get_ip() {
+  if [ "$USE_STEAM_SOCKET" -eq 1 ]; then
+    USE_IP=$(hostname -I | awk '{print $1}')
+  else
+    USE_IP=$(curl -s ifconfig.me)
+  fi
+}
+
+#
 # Function to display the main menu and get user's choice
+#
 show_main_menu() {
   CHOICE=$(whiptail --title "Settings Editor" --menu "Choose an option:" 12 60 3 \
     "1" "Edit Server Settings" \
     "2" "Generate FrontServer Bash File" \
     "3" "Exit" 3>&1 1>&2 2>&3)
 }
-
+#
 # Function to edit settings in the file
 edit_settings() {
   while true; do
@@ -81,6 +116,7 @@ generate_frontserver_bash_file() {
     else
         FRONT_SERVER="./FrontServer ProjectWar_Start?DedicatedServer?MaxPlayers=$MAX_PLAYERS"
     fi
+    get_ip
 
     cat <<EOL >"$FILENAME.sh"
 
@@ -90,7 +126,7 @@ generate_frontserver_bash_file() {
 cd $FRONT_SERVERDIR
 #
 # Execute FrontServer with arguments
-$FRONT_SERVER -ServerName="$SERVER_NAME" -ServerPassword="$SERVER_PASSWORD" -UserDir="$FRONT_USERDIR" ${SERVER_SETTINGS[@]}
+$FRONT_SERVER -ServerName="$SERVER_NAME" -ServerPassword="$SERVER_PASSWORD" -UserDir="$FRONT_USERDIR" -OutIPAddress=$USE_IP ${SERVER_SETTINGS[@]}
 EOL
 
     # Make the script executable
