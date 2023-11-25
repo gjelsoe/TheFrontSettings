@@ -13,13 +13,13 @@ A Linux CLI build on Bash & Whiptail to make it easyier, makeing a BASH file for
 > Use it with caution and always double check the result before using it.<br>
 ### TODO
 - [ ] Update README - WIP<br>
-- [ ] Force STEAM update before start<br>
-- [ ] Manual STEAM update from menu<br>
+- [*] Force STEAM update before start<br>
+- [*] Manual STEAM update from menu<br>
 - [ ] Description of Configuration Options within the script.<br>
 - [ ] Other handy stuff.<br>
 ### Wiki Page.
 I've added [Wiki page](https://github.com/gjelsoe/TheFrontSettings/wiki/Server-Settings) with all the settings found in the TheFrontManager along with<br>
-Default settings and where they are found in the Manager as of version **1.0.15**.<br>
+Default settings and where they are found in the Manager as of version **1.0.15**.<br> Also added Min, Max and Increment values as well.<br>
 ### Other Sources.
 Lots of good information. https://github.com/pharrisee/TheFrontLinuxServerInfo<br><br>
 From SurvivalServers.com :<br>
