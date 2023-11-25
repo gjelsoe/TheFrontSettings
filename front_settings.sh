@@ -10,7 +10,10 @@ USE_EPIC_SOCKET=0                               # Set to 1 if using EPIC and not
 FIND_EXTERNAL_IP=1                              # Lets the script find your IP Address. (0 - No, 1 - Yes)
                                                 # If UseSteamSocket=1, then it will insert your Public IP otherwise Local IP.
 USE_IP=127.0.0.1                           	# Enter your IP Address or let the script find it.
-
+UPDATE_BEFORE_START=0				# Do a STEAM update of The Front before starting the Server.
+#
+# STEAM update command, do not edit unless your know what your are doing.
+UPDATE_CMD="steamcmd +force_install_dir $FRONT_SERVERDIR +login anonymous +app_update 1007 +app_update 2334200 +validate +quit"
 #
 # Check if whiptail is installed
 #
@@ -41,13 +44,26 @@ get_ip() {
 }
 
 #
+# Force update of The Front
+#
+force_steam_update() {
+  {$UPDATE_CMD}
+  if [ $? -ne 0 ]; then
+    whiptail --title "Success" --msgbox "The Front update failed!" 10 40
+  else
+    whiptail --title "Success" --msgbox "The Font updated successfully!" 10 40
+  fi
+}
+
+#
 # Function to display the main menu and get user's choice
 #
 show_main_menu() {
-  CHOICE=$(whiptail --title "Settings Editor" --menu "Choose an option:" 12 60 3 \
+  CHOICE=$(whiptail --title "Settings Editor" --menu "Choose an option:" 12 60 4 \
     "1" "Edit Server Settings" \
     "2" "Generate FrontServer Bash File" \
-    "3" "Exit" 3>&1 1>&2 2>&3)
+    "3" "Force STEAM update" \
+    "4" "Exit." 3>&1 1>&2 2>&3)
 }
 #
 # Function to edit settings in the file
@@ -106,6 +122,12 @@ generate_frontserver_bash_file() {
       esac
     done < "$SETTINGS_FILE"
 
+    #
+    # Check STEAM update is gorin to run before start
+    if [ "$UPDATE_BEFORE_START" -eq 0 ]; then
+      UPDATE_CMD="#"
+    fi
+
     # Determine the FRONT_SERVER value based on UseSteamSocket and USE_EPIC
     if [ "$USE_STEAM_SOCKET" -eq 1 ]; then
         if [ "$USE_EPIC" -eq 1 ]; then
@@ -124,6 +146,7 @@ generate_frontserver_bash_file() {
 #
 # Enters The Front Server Dir.
 cd $FRONT_SERVERDIR
+${UPDATE_CMD}
 #
 # Execute FrontServer with arguments
 $FRONT_SERVER -ServerName="$SERVER_NAME" -ServerPassword="$SERVER_PASSWORD" -UserDir="$FRONT_USERDIR" -OutIPAddress=$USE_IP ${SERVER_SETTINGS[@]}
@@ -145,6 +168,7 @@ while true; do
   case $CHOICE in
     "1") edit_settings ;;
     "2") generate_frontserver_bash_file ;;
-    "3") exit ;;
+    "3") force_steam_update ;;
+    "4") exit ;;
   esac
 done
