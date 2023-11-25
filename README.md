@@ -1,11 +1,10 @@
 # TheFrontSettings
 
-Work In Progress.!\
-A Linux CLI build on Bash & Whiptail to make it easyier, makeing a BASH file for The Front Linux Dedicated Server.<br>
+**Work In Progress.!**\
+A Linux CLI build on Bash & Whiptail to make it easyier, makeing a BASH file for The Front Linux Dedicated Server.<br>For use with The Front Dedicated Linux Server **v1.0.15**
 * Easy Access to settings
 * Can autofill Local/Public IP of the Server (req. curl)
-* Generate Start script for The Front Dedicated Linux Server<br>
-  
+* Generate Start script for The Front Dedicated Linux Server  
 > [!TIP]
 > In order to take full advance of this script, it's recomended to have Whiptail and curl installed. If your are running Debian/Ubuntu, then you can use the following command to install them.<br> `sudo apt-get install curl whiptail -y`<br>
 
