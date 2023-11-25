@@ -27,6 +27,8 @@ A Linux CLI build on Bash & Whiptail to make it easyier, makeing a BASH file for
 I've added [Wiki page](https://github.com/gjelsoe/TheFrontSettings/wiki/Server-Settings) with all the settings found in the TheFrontManager along with<br>
 Default settings and where they are found in the Manager as of version **1.0.15**.<br> Also added Min, Max and Increment values as well.<br>
 
+More [Wiki pages](https://github.com/gjelsoe/TheFrontSettings/wiki) added.
+
 ---
 
 ### Other Sources.
