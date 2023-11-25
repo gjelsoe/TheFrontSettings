@@ -32,9 +32,12 @@ Default settings and where they are found in the Manager as of version **1.0.15*
 ### Other Sources.
 
 Lots of good information. https://github.com/pharrisee/TheFrontLinuxServerInfo<br><br>
+
 From SurvivalServers.com :<br>
 https://survivalservers.com/wiki/index.php?title=The_Front_Admin_Commands<br>
 https://survivalservers.com/wiki/index.php?title=The_Front_Advanced_Configuration<br>
+
+Good source of information. https://www.4netplayers.com/en/wiki/the-front/
 
 ---
 
