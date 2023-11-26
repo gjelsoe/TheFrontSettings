@@ -18,7 +18,7 @@ A Linux CLI build on Bash & Whiptail to make it easyier, makeing a BASH file for
 - [x] Manual STEAM update from menu<br>
 - [ ] Description of Configuration Options within the script.<br>
 - [ ] Other handy stuff.<br>
-- [ ] Update Menu Images.<br>
+- [x] Update Menu Images.<br>
 - [x] Settings Filter added.<br>
 
 ---
@@ -59,6 +59,9 @@ Good source of information. https://www.4netplayers.com/en/wiki/the-front/
 </p><br>
 <p align="center">
  <img src="https://github.com/gjelsoe/TheFrontSettings/blob/main/images/edit.jpg">
+</p><br>
+<p align="center">
+ <img src="https://github.com/gjelsoe/TheFrontSettings/blob/main/images/filter.jpg">
 </p><br>
 <p align="center">
  <img src="https://github.com/gjelsoe/TheFrontSettings/blob/main/images/save.jpg">
