@@ -17,7 +17,7 @@ A Linux CLI build on Bash & Whiptail to make it easyier, makeing a BASH file for
 - [x] Force STEAM update before start<br>
 - [x] Manual STEAM update from menu<br>
 - [ ] Description of Configuration Options within the script.<br>
-- [ ] Other handy stuff.<br>
+- [x] Other handy stuff.<br>
 - [x] Update Menu Images.<br>
 - [x] Settings Filter added.<br>
 
