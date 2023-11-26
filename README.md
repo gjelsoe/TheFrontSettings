@@ -1,13 +1,12 @@
 # TheFrontSettings
 
-Work In Progress.!\
-A Linux CLI build on Bash & Whiptail to make it easyier, makeing a BASH file for The Front Linux Dedicated Server.<br>
+**Work In Progress.!**\
+A Linux CLI build on Bash & Whiptail to make it easyier, makeing a BASH file for The Front Linux Dedicated Server.<br>For use with The Front Dedicated Linux Server **v1.0.15**
 * Easy Access to settings
 * Can autofill Local/Public IP of the Server (req. curl)
-* Generate Start script for The Front Dedicated Linux Server<br>
-  
+* Generate Start script for The Front Dedicated Linux Server  
 > [!TIP]
-> In order to take full advance of this script, it's recomended to have Whiptail and curl installed. If your are running Debian/Ubuntu, then you can use the following command to install them.<br> `sudo apt-get install curl whiptail -y`<br>
+> In order to take full advance of this script, it's need to have Whiptail and curl installed. If your are running Debian/Ubuntu, then you can use the following command to install them.<br> `sudo apt-get install curl whiptail -y`<br>
 
 > [!CAUTION]
 > I wrote this script to help my self out and it works for me on Ubuntu 22.04 LTS.<br>
@@ -20,6 +19,7 @@ A Linux CLI build on Bash & Whiptail to make it easyier, makeing a BASH file for
 - [ ] Description of Configuration Options within the script.<br>
 - [ ] Other handy stuff.<br>
 - [ ] Update Menu Images.<br>
+- [x] Settings Filter added.<br>
 
 ---
 
@@ -28,14 +28,19 @@ A Linux CLI build on Bash & Whiptail to make it easyier, makeing a BASH file for
 I've added [Wiki page](https://github.com/gjelsoe/TheFrontSettings/wiki/Server-Settings) with all the settings found in the TheFrontManager along with<br>
 Default settings and where they are found in the Manager as of version **1.0.15**.<br> Also added Min, Max and Increment values as well.<br>
 
+More [Wiki pages](https://github.com/gjelsoe/TheFrontSettings/wiki) added.
+
 ---
 
 ### Other Sources.
 
 Lots of good information. https://github.com/pharrisee/TheFrontLinuxServerInfo<br><br>
+
 From SurvivalServers.com :<br>
 https://survivalservers.com/wiki/index.php?title=The_Front_Admin_Commands<br>
 https://survivalservers.com/wiki/index.php?title=The_Front_Advanced_Configuration<br>
+
+Good source of information. https://www.4netplayers.com/en/wiki/the-front/
 
 ---
 
