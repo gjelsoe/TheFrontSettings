@@ -19,6 +19,7 @@ A Linux CLI build on Bash & Whiptail to make it easyier, makeing a BASH file for
 - [ ] Description of Configuration Options within the script.<br>
 - [ ] Other handy stuff.<br>
 - [ ] Update Menu Images.<br>
+- [x] Settings Filter added.<br>
 
 ---
 
