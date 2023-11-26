@@ -9,8 +9,8 @@ DESCRIPTION_FILE="server_settings.help"         # Help file for settings.
 USE_EPIC_SOCKET=0                               # Set to 1 if using EPIC and not STEAM.
 FIND_EXTERNAL_IP=1                              # Lets the script find your IP Address. (0 - No, 1 - Yes)
                                                 # If UseSteamSocket=1, then it will insert your Public IP otherwise Local IP.
-USE_IP=127.0.0.1                           	    # Enter your IP Address or let the script find it.
-UPDATE_BEFORE_START=0				                    # Do a STEAM update of The Front before starting the Server.
+USE_IP=127.0.0.1                                # Enter your IP Address or let the script find it.
+UPDATE_BEFORE_START=0                           # Do a STEAM update of The Front before starting the Server.
 #
 # STEAM update command, do not edit unless your know what your are doing.
 UPDATE_CMD="steamcmd +force_install_dir $FRONT_SERVERDIR +login anonymous +app_update 1007 +app_update 2334200 +validate +quit"
