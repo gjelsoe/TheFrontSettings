@@ -1,7 +1,7 @@
 # TheFrontSettings
 
 **Work In Progress.!**\
-A Linux CLI build on Bash & Whiptail to make it easyier, makeing a BASH file for The Front Linux Dedicated Server.<br>For use with The Front Dedicated Linux Server **v1.0.16**
+A Linux CLI build on Bash & Whiptail to make it easier, makeing a BASH file for The Front Linux Dedicated Server.<br>For use with The Front Dedicated Linux Server **v1.0.16**
 * Easy Access to settings
 * Can autofill Local/Public IP of the Server (req. curl)
 * Generate Start script for The Front Dedicated Linux Server  
