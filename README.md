@@ -1,7 +1,7 @@
 # TheFrontSettings
 
 **Work In Progress.!**\
-A Linux CLI build on Bash & Whiptail to make it easier, makeing a BASH file for The Front Linux Dedicated Server.<br>For use with The Front Dedicated Linux Server **v1.0.16**
+A Linux CLI build on Bash & Whiptail to make it easier, makeing a BASH file for The Front Linux Dedicated Server.<br>For use with The Front Dedicated Linux Server **v1.0.17**
 * Easy Access to settings
 * Can autofill Local/Public IP of the Server (req. curl)
 * Generate Start script for The Front Dedicated Linux Server  
@@ -26,7 +26,7 @@ A Linux CLI build on Bash & Whiptail to make it easier, makeing a BASH file for 
 ### Wiki Page.
 
 I've added [Wiki page](https://github.com/gjelsoe/TheFrontSettings/wiki/Server-Settings) with all the settings found in the TheFrontManager along with<br>
-Default settings and where they are found in the Manager as of version **1.0.15**.<br> Also added Min, Max and Increment values as well.<br>
+Default settings and where they are found in the Manager as of version **1.0.17**.<br> Also added Min, Max and Increment values as well.<br>
 
 More [Wiki pages](https://github.com/gjelsoe/TheFrontSettings/wiki) added.
 
