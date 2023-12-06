@@ -28,10 +28,10 @@ A Linux CLI build on Bash & Whiptail to make it easier, makeing a BASH file for 
 **FRONT_USERDIR=**<br>
 Path to your Save Game files.
 
-**FRONT_SERVERDIR=**
+**FRONT_SERVERDIR=**<br>
 Path where Server files are stored.
 
-**SETTINGS_FILE=**
+**SETTINGS_FILE=**<br>
 Read settings from this file. (Shouldn't need be to changed)
 
 **DESCRIPTION_FILE=**<br>
