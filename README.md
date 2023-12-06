@@ -13,13 +13,48 @@ A Linux CLI build on Bash & Whiptail to make it easier, makeing a BASH file for 
 > Use it with caution and always double check the result before using it.<br>
 
 ### TODO
-- [ ] Update README - WIP<br>
+- [x] Update README<br>
 - [x] Force STEAM update before start<br>
 - [x] Manual STEAM update from menu<br>
-- [ ] Description of Configuration Options within the script.<br>
+- [x] Description of Configuration Options within the script.<br>
 - [x] Other handy stuff.<br>
 - [x] Update Menu Images.<br>
 - [x] Settings Filter added.<br>
+
+---
+
+### Configuration Variables in front_settings.sh
+
+**FRONT_USERDIR=**<br>
+Path to your Save Game files.
+
+**FRONT_SERVERDIR=**
+Path where Server files are stored.
+
+**SETTINGS_FILE=**
+Read settings from this file. (Shouldn't need be to changed)
+
+**DESCRIPTION_FILE=**<br>
+Help file for settings. (Shouldn't need be to changed)
+
+**USE_EPIC_SOCKET=**<br>
+Use EPIC and not STEAM.
+
+**FIND_EXTERNAL_IP=**<br>
+Lets the script find your IP Address. (0 - No, 1 - Yes)
+
+**USE_IP=**<br>
+Enter your IP Address or let the script find it.
+
+**UPDATE_BEFORE_START=**<br>
+Do a STEAM update of The Front before starting the Server.
+
+**CUSTOM_CMD=**<br>
+Add an extra command to The Front Server.<br>
+
+**Notes :**<br>
+If UseSteamSocket=1, then it will insert your Public IP otherwise Local IP. if FIND_EXTERNAL_IP it set to 1.<br>
+USE_EPIC_SOCKET might not be needed as there are no official EPIC Client for Linux but I've included it anyway.<br>
 
 ---
 
