@@ -5,7 +5,7 @@ QueueThreshold=The max number of players on your server.
 ServerFightModeType=0 = PVP, 1 = PVE. In PVP mode, you will be able to attack other players and their structures. In PVE, you will not.
 IsCanSelfDamage=Allows players to damage themselves.
 IsCanFriendDamage=Allows squadmates to damage each other.
-ClearSeverTime=Sets the time at which all server data will be wiped. (Format: YYYY-MM-DD, -- = Disable)
+ClearSeverTime=Sets the time at which all server data will be wiped.
 UseSteamSocket=User SteamProxy Socket, usefull if Ports can not be forwarded.
 Port=Port Number to be used, only ONE server on each Portnumber.
 BeaconPort=Beacon Port Number to be used, only ONE server on each Portnumber.
