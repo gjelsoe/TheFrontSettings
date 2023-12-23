@@ -61,7 +61,7 @@ USE_EPIC_SOCKET might not be needed as there are no official EPIC Client for Lin
 ### Wiki Page.
 
 I've added [Wiki page](https://github.com/gjelsoe/TheFrontSettings/wiki/Server-Settings) with all the settings found in the TheFrontManager along with<br>
-Default settings and where they are found in the Manager as of version **1.0.18**.<br> Also added Min, Max and Increment values as well.<br>
+Default settings and where they are found in the Manager as of version **1.0.19**.<br> Also added Min, Max and Increment values as well.<br>
 
 More [Wiki pages](https://github.com/gjelsoe/TheFrontSettings/wiki) added.
 
